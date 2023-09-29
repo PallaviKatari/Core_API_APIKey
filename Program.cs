@@ -17,8 +17,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseStaticFiles();
+
 //Pass ApiKey whish is givewn in appsettings.json in Authorization - Postman Tool
-app.UseMiddleware<ApiKeyMiddleware>();
+//app.UseMiddleware<ApiKeyMiddleware>();
 
 app.UseHttpsRedirection();
 
